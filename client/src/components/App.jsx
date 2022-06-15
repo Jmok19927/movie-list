@@ -14,7 +14,7 @@ class App extends React.Component {
       movieList: [
       ],
       allMovies: [
-        {title: 'No movies added yet'},
+        {title: 'No movies added yet', watched: 'test'},
       ],
       query: '',
       addingMovie: '',
@@ -52,7 +52,7 @@ class App extends React.Component {
     var movieList = this.state.allMovies;
     //add a check if the movie is already in the movie list
     if (this.state.addingMovie != '') {
-      var newMovie = {title: this.state.addingMovie};
+      var newMovie = {title: this.state.addingMovie, watched: 'Not watched'};
       if (this.state.allMovies[0].title === 'No movies added yet') {
         movieList[0] = newMovie;
       } else {
@@ -67,13 +67,21 @@ class App extends React.Component {
     this.setState({addingMovie: event.target.value})
   }
 
+  handleWatchClick(event) {
+    console.log(event);
+    var newList = this.state.allMovies;
+    var index = newList.indexOf(event);
+    newList[index].watched = (newList[index].watched === 'Watched') ? 'Not Watched' : 'Watched';
+    this.setState({allMovies: newList});
+  }
+
 
   render() {
     return (<div>
       <h1>MovieList</h1>
       <AddMovie submit={this.handleAddSubmit.bind(this)} change={this.handleAddChange.bind(this)}/>
       <SearchMovie allMovies={this.state.allMovies} matchingMovies={this.state.movieList} submit={this.handleSearchSubmit.bind(this)} change={this.handleSearchChange.bind(this)}/>
-      <MovieList matchingMovies={this.state.movieList}/>
+      <MovieList matchingMovies={this.state.movieList} handleWatchClick={this.handleWatchClick.bind(this)}/>
 
     </div>
 )

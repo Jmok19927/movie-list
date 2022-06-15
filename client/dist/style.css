@@ -12,7 +12,7 @@ body {
 
 .movieEntry {
   border: solid grey 2px;
-  padding: 15px 0 15px 0;
+  padding: 15px 15px 15px 15px;
   width: 75%;
   margin: 30px 30px 30px 30px;
 }
