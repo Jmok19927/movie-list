@@ -3,7 +3,6 @@ import MovieListEntry from './MovieListEntry.jsx';
 
 var MovieList = ({matchingMovies}) => (
   <div className="movieList">
-    <h1>MovieList</h1>
     {matchingMovies.map((item, index) =>
       <MovieListEntry movie={item} key={index}/>
     )}
