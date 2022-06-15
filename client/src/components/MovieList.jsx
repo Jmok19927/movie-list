@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieListEntry from './MovieListEntry.jsx';
 
-var MovieList = ({allMovies,matchingMovies}) => (
+var MovieList = ({matchingMovies}) => (
   <div className="movieList">
     <h1>MovieList</h1>
     {matchingMovies.map((item, index) =>
