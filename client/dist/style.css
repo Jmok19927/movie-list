@@ -1,3 +1,24 @@
 body {
   font-family: sans-serif, arial;
+  padding-left: 50px;
+}
+
+.movieList {
+  border: solid black 2px;
+  padding-left: 100px;
+  width: 80%;
+  height: auto;
+}
+
+.movieEntry {
+  border: solid grey 2px;
+  padding: 15px 0 15px 0;
+  width: 75%;
+  margin: 30px 30px 30px 30px;
+}
+
+.search {
+  padding: 15px 0 15px 0;
+  height: 50px;
+  width: auto;
 }
