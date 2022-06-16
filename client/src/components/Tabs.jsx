@@ -37,9 +37,9 @@ var Tabs = (props) => {
         <li className={activeTab === "Not Watched" ? "active" : ""} onClick={handleNotWatched}>Not Watched</li>
       </ul>
       <div className="outlet">
-        {activeTab === "All" ? <MovieList matchingMovies={props.matchingMovies} handleWatchClick={props.handleWatchClick} /> : <MovieList matchingMovies={[]} />}
-        {activeTab === "Watched" ? <MovieList matchingMovies={watchedMovies} handleWatchClick={props.handleWatchClick} /> : <MovieList matchingMovies={[]} />}
-        {activeTab === "Not Watched" ? <MovieList matchingMovies={notWatchedMovies} handleWatchClick={props.handleWatchClick} /> : <MovieList matchingMovies={[]} />}
+        {activeTab === "All" && <MovieList matchingMovies={props.matchingMovies} handleWatchClick={props.handleWatchClick} />}
+        {activeTab === "Watched" && <MovieList matchingMovies={watchedMovies} handleWatchClick={props.handleWatchClick} />}
+        {activeTab === "Not Watched" && <MovieList matchingMovies={notWatchedMovies} handleWatchClick={props.handleWatchClick} />}
 
       </div>
     </div>

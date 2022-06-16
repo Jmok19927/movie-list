@@ -51,7 +51,9 @@ class App extends React.Component {
   handleAddSubmit(event) {
     event.preventDefault();
     var movieList = this.state.allMovies;
-    //add a check if the movie is already in the movie list
+    //add a check if the movie is already in the movie list later
+    //either via an array of 'added' movie titles and check indexOf
+    //or turn the list into an object and can check if the key already exists
     if (this.state.addingMovie != '') {
       var newMovie = {title: this.state.addingMovie, watched: 'Not watched'};
       if (this.state.allMovies[0].title === 'No movies added yet') {
