@@ -5,7 +5,7 @@ var MovieListEntry = ({movie, watchClick}) => {
     <div className="movieEntry">
       {movie.title}
       {/* add a way to make this button disappear if movie.watched === undefined */}
-      <button style={{float:'right'}} onClick={() => watchClick(movie)}>{movie.watched}</button>
+      {movie.watched && <button style={{float:'right'}} onClick={() => watchClick(movie)}>{movie.watched}</button>}
     </div>
   )
 }

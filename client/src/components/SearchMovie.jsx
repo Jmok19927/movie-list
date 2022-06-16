@@ -5,9 +5,9 @@ var SearchMovie = (props) => {
     return (
     <form className="search" onSubmit={props.submit}>
       <label>
-        <input id="search" type="text" placeholder={'Search...'} className="forminput" defaultValue={''} onChange={props.change}/>
+        <input className="input" type="text" placeholder={'Search...'} defaultValue={''} onChange={props.change}/>
       </label>
-      <input type="submit" value="Go!" className="forminput" />
+      <input type="submit" value="Go!" className="submitButton" />
     </form>
   )
 }

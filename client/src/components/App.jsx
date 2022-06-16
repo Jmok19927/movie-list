@@ -2,6 +2,7 @@ import React from 'react';
 import MovieList from './MovieList.jsx';
 import SearchMovie from './SearchMovie.jsx';
 import AddMovie from './AddMovie.jsx';
+import Tabs from './Tabs.jsx';
 
 // const App = (props) => (
 //   <div>Hello World!</div>
@@ -14,7 +15,7 @@ class App extends React.Component {
       movieList: [
       ],
       allMovies: [
-        {title: 'No movies added yet', watched: 'test'},
+        {title: 'No movies added yet', watched: ''},
       ],
       query: '',
       addingMovie: '',
@@ -81,7 +82,8 @@ class App extends React.Component {
       <h1>MovieList</h1>
       <AddMovie submit={this.handleAddSubmit.bind(this)} change={this.handleAddChange.bind(this)}/>
       <SearchMovie allMovies={this.state.allMovies} matchingMovies={this.state.movieList} submit={this.handleSearchSubmit.bind(this)} change={this.handleSearchChange.bind(this)}/>
-      <MovieList matchingMovies={this.state.movieList} handleWatchClick={this.handleWatchClick.bind(this)}/>
+      <Tabs  matchingMovies={this.state.movieList} handleWatchClick={this.handleWatchClick.bind(this)}/>
+      {/* <MovieList matchingMovies={this.state.movieList} handleWatchClick={this.handleWatchClick.bind(this)}/> */}
 
     </div>
 )

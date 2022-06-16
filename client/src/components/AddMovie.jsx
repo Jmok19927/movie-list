@@ -4,9 +4,9 @@ var AddMovie = (props) => {
   return(
     <form className="addmovie" onSubmit={props.submit}>
       <label>
-        <input id="add" placeholder="Add movie title here" defaultValue='' onChange={props.change}></input>
+        <input className="input" placeholder="Add movie title here" defaultValue='' onChange={props.change}></input>
       </label>
-      <input type="submit" value="Add"></input>
+      <input className="submitButton" type="submit" value="Add"></input>
     </form>
   )
 }
